@@ -47,5 +47,7 @@ echo "imwheel --kill --buttons \"4 5\" > /dev/null 2> /dev/null" >> ~/.bashrc
 pgrep -f imwheel | xargs kill > /dev/null 2> /dev/null
 
 # Reload current session
-source ~/.bashrc
-exec bash
+echo "You maybe need to restart a new terminal to apply change"
+. ~/.bashrc
+#source ~/.bashrc
+#exec bash

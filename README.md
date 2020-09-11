@@ -11,7 +11,6 @@
 echo ~/.bashrc >> alias open='nautilus . &'
 ``` 
 
-
 ## Mouse Scroll Wheel
 
 check for `mouse_wheel_speed.sh`, work only for "real" mouse, no trackpad support
@@ -35,7 +34,8 @@ check for `common_alias.sh`
 wget https://raw.githubusercontent.com/cbarange/popos-conf/master/common_alias.sh -O ~/.bash_aliases
 echo -e "if [ -f ~/.bash_aliases ]; then \n" \
 	". ~/.bash_aliases \n" \
-	"fi \n"
+	"fi \n" \
+	>> ~/.bashrc
 source ~/.bashrc
 ```
 
