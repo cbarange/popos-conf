@@ -1,8 +1,3 @@
-# File Explorer
-
-```bash
-echo ~/.bashrc >> alias open='nautilus . &'
-``` 
 
 # Shortcuts
 
@@ -75,10 +70,28 @@ subl config
 Host github.com
 	HostName github.com
 	User git
-	IdentityFile ~/.ssh/github
+	PreferredAuthentications publickey
+  IdentityFile ~/.ssh/github
 
 git config --global user.name "cbarange"
 git config --global user.email "cbarange.dev@gmail.com"
+
+# Exemple de config ssh
+Host server10
+  Hostname 1.2.3.4
+  IdentityFile ~/backups/.ssh/id_dsa
+  user foobar
+  Port 30000
+  ForwardX11Trusted yes
+  TCPKeepAlive yes
+Host github.com
+  User git
+  Hostname github.com
+  PreferredAuthentications publickey
+  IdentityFile /home/user/.ssh/id_rsa
+# Connexion ssh avec le nom de host
+ssh server10
+
 ``` 
 
 
